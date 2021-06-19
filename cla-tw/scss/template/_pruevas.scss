@@ -1,0 +1,123 @@
+body {
+  display: grid;
+  place-items: center;
+}
+.contenCalTwi {
+  width: 18.75em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media screen and (min-width: 2000px) {
+    font-size: 28px;
+  }
+}
+.cal {
+  width: 100%;
+  padding: 0.625em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendario {
+  width: 12.5em;
+  height: 12.5em;
+  border: 1px solid #333;
+  box-shadow: 0 0 0.1875em #333;
+  border-radius: 0.3125em;
+  cursor: pointer;
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3125em;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
+.twitter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__twis {
+    width: 100%;
+    height: 25em;
+  }
+}
+.twitter-timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3125em;
+  border: 0.0625em solid #333;
+  box-shadow: 0 0 0.1875em #333;
+}
+.conten_calModal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.3125em;
+  transform: scale(0);
+  transition: transform 0.5s;
+  &--openImg {
+    transform: scale(1);
+  }
+  &__imgConten {
+    height: 50%;
+    position: relative;
+    @media screen and (min-width: 768px) {
+      height: 80%;
+    }
+    @media screen and (min-width: 1400px) {
+      height: 90%;
+    }
+  }
+  &__img {
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #333;
+  }
+
+  &__close {
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    top: -35px;
+    right: 5px;
+    cursor: pointer;
+    &:hover {
+      color: #333;
+      transition: color 0.3s;
+    }
+    @media screen and (min-width: 768px) {
+      top: -15px;
+      right: -10px;
+    }
+
+    @media screen and (min-width: 2000px) {
+      font-size: 3.5rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      top: -25px;
+      right: -20px;
+    }
+  }
+}
